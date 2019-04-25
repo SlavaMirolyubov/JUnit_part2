@@ -44,8 +44,11 @@ public enum Operations {
     abstract BigDecimal apply(BigDecimal x, BigDecimal y) throws DivideByZeroException;
 
     public static Operations getEnum(String value) {
-        for (Operations operator : values())
-            if (operator.getSymbol().equals(value)) return operator;
+        for (Operations operator : values()) {
+            if (operator.getSymbol().equals(value)) {
+                return operator;
+            }
+        }
         throw new IllegalArgumentException();
     }
 }

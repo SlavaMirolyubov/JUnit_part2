@@ -17,7 +17,7 @@ public class NegativeOperationsTest {
 
     @Test
     void getSymbol() {
-        assertFalse("$".equals(Operations.PLUS.getSymbol()));
+        assertNotEquals("$", Operations.PLUS.getSymbol());
     }
 
 }
